@@ -1,1 +1,1 @@
-A website using astro to display personal blog
+A website using astrowind to display personal blog
