@@ -1,0 +1,57 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import {getPermalink} from "../utils/permalinks";
+
+const metadata = {
+  title: 'Devops\'s corner: Run the code with pipelines',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Find my repo',
+        href: 'https://github.com/anchor1986',
+        target: '_blank',
+      },
+      { text: 'Contact me', href: getPermalink('/contact') },
+    ]}
+  >
+    <Fragment slot="title">
+      Run the code <span class="hidden xl:inline">with pipelines</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        I'm a devops engineer from China, with 14 years experiences in building and maintaining scalable and reliable infrastructure. Proficient in CI/CD pipelines, cloud platforms, and automation tools. Let's build something great together!
+        </span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+      
+    </Fragment>
+    <Fragment slot="image">
+       <img src='/images/devops技术栈.jpg' alt="devops" style= "width: 100%;height: 100%"></img>
+    </Fragment>
+  </Hero>
+
+  <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display a devops's diary. Thanks.
+                `}
+  />
+</Layout>

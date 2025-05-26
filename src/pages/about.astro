@@ -1,0 +1,30 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About me',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About me"
+  >
+    <Fragment slot="title">
+      </Fragment>
+
+    <Fragment slot="subtitle">
+      A devops engineer from China, with 14 years experiences in building and maintaining scalable and reliable infrastructure. Proficient in CI/CD pipelines, cloud platforms, and automation tools. Adept at Python and Shell scripting. Familiar with nestjs and spring boot, but not too much.
+    </Fragment>
+    
+  </Hero>
+
+  
+</Layout>
